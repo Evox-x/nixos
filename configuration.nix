@@ -29,6 +29,11 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Wifi after suspend test fuckery
+  networking.networkmanager.wifi.powersave = false;
+  boot.kernelParams = ["pcie_aspm=off"];
+
+
   # Set your time zone.
   time.timeZone = "Europe/Zurich";
 
