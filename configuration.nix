@@ -30,11 +30,7 @@
   networking.networkmanager.enable = true;
 
   # Wifi after suspend test fuckery
-  boot.extraModprobeConfig = ''
-    options iwlwifi powersave=0
-    options iwlmvm power_scheme=1
-  '';
-  boot.kernelParams = [ "pcie_aspm=off" ];
+  networking.networkmanager.wifi.powersave = false; 
 
 
   # Set your time zone.
