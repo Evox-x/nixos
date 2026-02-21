@@ -32,6 +32,21 @@
   # Wifi after suspend test fuckery
   networking.networkmanager.wifi.powersave = false; 
 
+  boot.kernelParams = [
+  "pcie_aspm=off"
+  "pcie_port_pm=off"
+  ];
+
+  boot.extraModprobeConfig = ''
+  options iwlwifi power_save=0
+  options iwlwifi enable_ini=0
+  options iwlmvm power_scheme=1
+  '';
+
+  services.logind.lidSwitch = "suspend";
+  services.logind.lidSwitchExternalPower = "suspend";
+  services.logind.lidSwitchDocked = "ignore";
+
 
   # Set your time zone.
   time.timeZone = "Europe/Zurich";
