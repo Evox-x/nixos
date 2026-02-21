@@ -35,6 +35,7 @@
   # Wifi after suspend test fuckery
   networking.networkmanager.wifi.powersave = false; 
 
+  /* i verstoh ned wases macht ond got eh ned
   boot.kernelParams = [
   "pcie_aspm=off"
   "pcie_port_pm=off"
@@ -45,10 +46,13 @@
   options iwlwifi enable_ini=0
   options iwlmvm power_scheme=1
   '';
+  */
   #wifi workaround
-  services.logind.lidSwitch = "ignore";
-  services.logind.lidSwitchExternalPower = "ignore";
-  services.logind.lidSwitchDocked = "ignore";
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
+    HandleLidSwitchDocked = "ignore";
+  };
 
 
   # Set your time zone.
@@ -73,8 +77,8 @@
   services.xserver.enable = true;
 
   # Enable the GNOME and NIRI Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
   programs.niri.enable = true;
 
   # Configure keymap in X11

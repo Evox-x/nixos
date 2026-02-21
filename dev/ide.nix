@@ -5,7 +5,7 @@
 
     environment.systemPackages = with pkgs; [
       vscode
-      jetbrains.idea-ultimate
+      jetbrains.idea
       jetbrains.webstorm
       jetbrains.rider
     ];
