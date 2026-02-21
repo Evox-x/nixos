@@ -10,6 +10,6 @@
     niri
     waybar
     alacritty
-    wofi
+    fuzzel
   ];
 }
