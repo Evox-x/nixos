@@ -2,10 +2,11 @@
 
 {
   environment.systemPackages = with pkgs; [
-    firefox
+    firefox-devedition-unwrapped
     discord
     thunderbird
     spotify
     obsidian
+    unityhub
   ];
 }

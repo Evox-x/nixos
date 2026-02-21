@@ -5,6 +5,8 @@
 { config, pkgs, ... }:
 
 {
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -13,6 +15,7 @@
       ./dev/base.nix
       ./dev/languages.nix
       ./dev/ide.nix
+      
     ];
 
   # Bootloader.
@@ -42,9 +45,9 @@
   options iwlwifi enable_ini=0
   options iwlmvm power_scheme=1
   '';
-
-  services.logind.lidSwitch = "suspend";
-  services.logind.lidSwitchExternalPower = "suspend";
+  #wifi workaround
+  services.logind.lidSwitch = "ignore";
+  services.logind.lidSwitchExternalPower = "ignore";
   services.logind.lidSwitchDocked = "ignore";
 
 
@@ -155,4 +158,11 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
 
+  # Install home-manager module
+  nixpkgs.config.allowUnfree = true;
+
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+
+  home-manager.users.evoxx = import ./home.nix;
 }
