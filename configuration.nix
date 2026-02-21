@@ -6,7 +6,7 @@
 
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -159,8 +159,6 @@
   system.stateVersion = "25.11"; # Did you read the comment?
 
   # Install home-manager module
-  nixpkgs.config.allowUnfree = true;
-
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
 
