@@ -7,9 +7,10 @@
   home.stateVersion = "25.11"; 
 
   home.packages = with pkgs; [
-    niri
+    #niri
     waybar
     alacritty
     fuzzel
+    #xwayland-satellite # xwayland support for niri
   ];
 }

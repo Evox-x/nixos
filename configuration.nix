@@ -177,7 +177,12 @@
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-wlr
-    ];
+      ];
+    };
   };
-};
+  #niri
+  services.dbus.enable = true;
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 }
