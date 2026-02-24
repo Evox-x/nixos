@@ -168,4 +168,16 @@
   home-manager.useUserPackages = true;
 
   home-manager.users.evoxx = import ./home.nix;
+
+  programs.direnv.enable = true;
+
+  #Portals for Screenshare
+  xdg = {
+  portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+    ];
+  };
+};
 }

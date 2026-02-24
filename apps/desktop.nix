@@ -9,7 +9,7 @@
     spotify
     obsidian
     unityhub
-    teams
+    teams-for-linux
 
     libreoffice
     hunspellDicts.de_CH
