@@ -184,6 +184,6 @@
   programs.xwayland.enable = true;
   services.dbus.enable = true;
   environment.sessionVariables = {
-    ELECTRON_OZONE_PLATFORM_HINT = "x11";
+    NIXOS_OZONE_WL = "1";
   };
 }
