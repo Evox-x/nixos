@@ -10,5 +10,11 @@
     waybar
     alacritty
     fuzzel
+    playerctl
+    pavucontrol
+    blueman
+    brightnessctl
+    networkmanagerapplet
+    swww #wallpaper
   ];
 }

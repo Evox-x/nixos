@@ -12,6 +12,7 @@
       ./hardware-configuration.nix
 
       ./apps/desktop.nix
+      ./apps/fonts.nix
       ./dev/base.nix
       ./dev/languages.nix
       ./dev/ide.nix
