@@ -6,6 +6,7 @@
     jdk25
     dotnet-sdk_8
     python3
+    uv
 
     # Haskell
     ghc
