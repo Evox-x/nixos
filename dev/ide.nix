@@ -9,5 +9,6 @@
       jetbrains.idea
       jetbrains.webstorm
       jetbrains.rider
+      jetbrains.pycharm-community
     ];
 }

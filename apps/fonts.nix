@@ -2,6 +2,7 @@
 
 {
   fonts.packages = with pkgs; [
-    nerd-fonts.fantasque-sans-mono
+    nerd-fonts.symbols-only
+    nerd-fonts.jetbrains-mono
   ];
 }
